@@ -23,4 +23,5 @@ app.get("/", async (req, res) => {
   res.render("articles/index", { articles: articles });
 });
 app.use("/articles", articleRouter);
-app.listen(5000);
+const port = process.env.PORT || 5000;
+app.listen(port);
